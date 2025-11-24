@@ -5,6 +5,8 @@ fetch('../data/amphoras.json')
   .then(response => response.json())
   .then(data => {
     const amphora = data.find(a => a.id === amphoraId);
+    console.log("URL parameter id:", amphoraId);
+    console.log("Found amphora:", amphora ? amphora.name : null);
     const container = document.getElementById('details');
 
     if (!amphora) {
@@ -77,19 +79,38 @@ fetch('../data/amphoras.json')
 
           <br>
 
-          <!-- DRAWINGS -->
+          <!-- DRAWINGS (Images) -->
           <div>
             <h4 class="title is-4">Drawings</h4>
             <div class="columns">
               ${amphora.media.drawings && amphora.media.drawings.length > 0
-                ? amphora.media.drawings.map(svg => `
+                ? amphora.media.drawings.map(img => `
                   <figure class="image mb-3 column is-3">
-                    <img src="${svg}" alt="Drawing of ${amphora.name}">
+                    <img src="${img}" alt="Drawing of ${amphora.name}">
                   </figure>
                 `).join('')
                 : '<p>No drawings available.</p>'
               }
             </div>
+          </div>
+
+          <br>
+
+          <!-- SVG MODELS -->
+          <div>
+            <h4 class="title is-6">SVG Model</h4>
+            ${amphora.media.svg && amphora.media.svg.length > 0
+              ? amphora.media.svg.map(svgFile => `
+                <model-viewer src="${svgFile}"
+                  alt="${amphora.name} SVG"
+                  camera-controls
+                  auto-rotate
+                  exposure="1"
+                  style="width:100%; height:300px; background:#f4f4f4; margin-bottom:1rem;">
+                </model-viewer>
+              `).join('')
+              : '<p>No SVG model available.</p>'
+            }
           </div>
 
           <br>
@@ -104,7 +125,8 @@ fetch('../data/amphoras.json')
                   camera-controls
                   auto-rotate
                   exposure="1"
-                  style="width:100%; height:300px; background:#f4f4f4; margin-bottom:1rem;">
+                  camera-orbit="90deg 75deg auto"
+                  style="width:100%; height:500px; background:#333; margin-bottom:1rem;">
                 </model-viewer>
               `).join('')
               : '<p>No 3D model available.</p>'

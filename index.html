@@ -12,11 +12,144 @@
 <section class="section">
   <div class="container">
     <h1 class="title">Amphora Types</h1>
+    <div id="filterSection" class="box mb-5">
+      <h3 class="title is-5">Filter Amphoras by Characteristics</h3>
+      <div class="field is-horizontal">
+        <div class="field mr-2">
+          <label class="label">Rim Type</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterRim">
+                <option value="">Select</option>
+                <option value="Beaded">Beaded</option>
+                <option value="Biconical">Biconical</option>
+                <option value="Collar">Collar</option>
+                <option value="Everted">Everted</option>
+                <option value="Flanged">Flanged</option>
+                <option value="Flaring">Flaring</option>
+                <option value="None">None</option>
+                <option value="Pulley wheel">Pulley wheel</option>
+                <option value="Rounded">Rounded</option>
+                <option value="Triangular">Triangular</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field mr-2">
+          <label class="label">Shoulder Type</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterShoulder">
+                <option value="">Select</option>
+                <option value="Carinated">Carinated</option>
+                <option value="None/smooth">None/smooth</option>
+                <option value="Rounded">Rounded</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field mr-2">
+          <label class="label">Handles in Profile</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterHandlesProfile">
+                <option value="">Select</option>
+                <option value="Arched">Arched</option>
+                <option value="Bowed">Bowed</option>
+                <option value="Curved">Curved</option>
+                <option value="Ear-shaped">Ear-shaped</option>
+                <option value="Long vertical">Long vertical</option>
+                <option value="Peaked">Peaked</option>
+                <option value="Ring">Ring</option>
+                <option value="Short vertical">Short vertical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field mr-2">
+          <label class="label">Handles in Section</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterHandlesSection">
+                <option value="">Select</option>
+                <option value="Bifid">Bifid</option>
+                <option value="Grooved">Grooved</option>
+                <option value="Ovoid/Elliptical">Ovoid/Elliptical</option>
+                <option value="Ridged">Ridged</option>
+                <option value="Round">Round</option>
+                <option value="Semi-circular">Semi-circular</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field mr-2">
+          <label class="label">Neck Type</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterNeck">
+                <option value="">Select</option>
+                <option value="Broad/wide">Broad/wide</option>
+                <option value="Conical">Conical</option>
+                <option value="Cylindrical">Cylindrical</option>
+                <option value="Hourglass">Hourglass</option>
+                <option value="None">None</option>
+                <option value="Short/narrow">Short/narrow</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field mr-2">
+          <label class="label">Body Type</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterBody">
+                <option value="">Select</option>
+                <option value="Cylindrical">Cylindrical</option>
+                <option value="Globular">Globular</option>
+                <option value="Narrow">Narrow</option>
+                <option value="Ovoid">Ovoid</option>
+                <option value="Piriform">Piriform</option>
+                <option value="Tapered">Tapered</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Base Type</label>
+          <div class="control">
+            <div class="select">
+              <select id="filterBase">
+                <option value="">Select</option>
+                <option value="Button">Button</option>
+                <option value="Cylindrical">Cylindrical</option>
+                <option value="Flared">Flared</option>
+                <option value="Flat">Flat</option>
+                <option value="Knobbed">Knobbed</option>
+                <option value="Long hollow">Long hollow</option>
+                <option value="Pointed">Pointed</option>
+                <option value="Ringed">Ringed</option>
+                <option value="Rounded">Rounded</option>
+                <option value="Rounded basal point">Rounded basal point</option>
+                <option value="Short hollow">Short hollow</option>
+                <option value="Spike/tapered">Spike/tapered</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="amphoraList" class="columns is-multiline"></div>
   </div>
 </section>
 
-<script src="script/category.js"></script>
+<script src="script/catalogue.js"></script>
+<script src="script/filter.js"></script>
 
 </body>
 </html>

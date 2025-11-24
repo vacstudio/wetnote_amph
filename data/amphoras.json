@@ -68,11 +68,16 @@
         "data/drawings/dressel20/DR111.jpg"
       ],
       "models3d": [
-        "data/models3d/dressel20/Dressel_20_D_001.obj"
+        "data/models3d/dressel20/Dressel_20_D_001.glb"
       ],
       "modelsSVG": [
-        "data/models3d/dressel20/Dressel_20_D_001.svg"
+        "data/modelsSVG/dressel20/Dressel_20_D_001.svg"
       ]
+    },
+
+    "filterData": {
+      "rim": "rounded",
+      "shoulder": "rounded"
     }
   }
 ]
