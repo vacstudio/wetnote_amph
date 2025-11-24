@@ -1,0 +1,78 @@
+[
+  {
+    "id": "dressel-20",
+    "name": "Dressel 20",
+
+    "classification": {
+      "typology": "Dressel 20",
+      "category": "Roman",
+      "subCategory": "Transport Amphora"
+    },
+
+    "chronology": {
+      "period": "Roman Imperial",
+      "century": "1st–3rd century AD",
+      "dateRange": "50 AD – 250 AD"
+    },
+
+    "origin": {
+      "productionRegion": "Baetica",
+      "productionCenter": "Guadalquivir Valley (Spain)",
+      "clayDescription": "Fine, orange-brown fabric with small black inclusions",
+      "fabricCode": "FAB-BT-A"
+    },
+
+    "morphology": {
+      "rim": "Thick rounded rim",
+      "neck": "Short neck",
+      "handles": "Large vertical handles, attached from shoulder to rim",
+      "body": "Globular",
+      "shoulder": "Soft rounded shoulder",
+      "base": "Pointed base",
+      "maximumDiameter": "At the body midsection",
+      "surfaceTreatment": "Often ribbed body"
+    },
+
+    "measurements": {
+      "height_cm": 70,
+      "rimDiameter_cm": 17,
+      "bodyDiameter_cm": 40,
+      "baseDiameter_cm": 3,
+      "weight_kg": 7.5
+    },
+
+    "distribution": {
+      "regions": ["Western Mediterranean", "Rome", "Gaul", "North Africa"],
+      "commonContexts": ["Shipwrecks", "Harbor deposits", "Storage facilities"]
+    },
+
+    "findspots": [
+      {
+        "location": "Monte Testaccio",
+        "country": "Italy",
+        "context": "Olive oil dumping hill",
+        "notes": "Dressel 20 is the dominant type found here."
+      }
+    ],
+
+    "description": "Large globular Roman amphora type widely used for olive oil distribution from Baetica.",
+
+    "media": {
+      "images": [
+        "data/images/dressel20/PEC16.jpg"
+      ],
+      "drawings": [
+        "data/drawings/dressel20/DR140.jpg",
+        "data/drawings/dressel20/DR141.jpg",
+        "data/drawings/dressel20/DR600.jpg",
+        "data/drawings/dressel20/DR111.jpg"
+      ],
+      "models3d": [
+        "data/models3d/dressel20/Dressel_20_D_001.obj"
+      ],
+      "modelsSVG": [
+        "data/models3d/dressel20/Dressel_20_D_001.svg"
+      ]
+    }
+  }
+]
