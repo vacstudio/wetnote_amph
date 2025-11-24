@@ -17,12 +17,28 @@ fetch('../data/amphoras.json')
       <h2 class="subtitle">${amphora.chronology.period} (${amphora.chronology.century})</h2>
 
       <div class="columns">
+        
+        <!-- LEFT COLUMN : MEDIA GALLERY -->
         <div class="column is-one-third">
-          <figure class="image">
-            <img src="${amphora.media.images[0]}" alt="${amphora.name}">
-          </figure>
+          
+          <h3 class="title is-5">Media</h3>
+
+          <!-- IMAGE GALLERY -->
+          <div>
+            <h4 class="title is-6">Photos</h4>
+            ${amphora.media.images && amphora.media.images.length > 0
+              ? amphora.media.images.map(img => `
+                <figure class="image mb-3">
+                  <img src="${img}" alt="${amphora.name}">
+                </figure>
+              `).join('')
+              : '<p>No photos available.</p>'
+            }
+          </div>
+
         </div>
 
+        <!-- RIGHT COLUMN : DETAILS -->
         <div class="column">
 
           <h3 class="title is-5">Classification</h3>
@@ -58,6 +74,43 @@ fetch('../data/amphoras.json')
 
           <h3 class="title is-5">Description</h3>
           <p>${amphora.description}</p>
+
+          <br>
+
+          <!-- DRAWINGS -->
+          <div>
+            <h4 class="title is-4">Drawings</h4>
+            <div class="columns">
+              ${amphora.media.drawings && amphora.media.drawings.length > 0
+                ? amphora.media.drawings.map(svg => `
+                  <figure class="image mb-3 column is-3">
+                    <img src="${svg}" alt="Drawing of ${amphora.name}">
+                  </figure>
+                `).join('')
+                : '<p>No drawings available.</p>'
+              }
+            </div>
+          </div>
+
+          <br>
+
+          <!-- 3D MODELS -->
+          <div>
+            <h4 class="title is-6">3D Model</h4>
+            ${amphora.media.models3d && amphora.media.models3d.length > 0
+              ? amphora.media.models3d.map(model => `
+                <model-viewer src="${model}"
+                  alt="${amphora.name}"
+                  camera-controls
+                  auto-rotate
+                  exposure="1"
+                  style="width:100%; height:300px; background:#f4f4f4; margin-bottom:1rem;">
+                </model-viewer>
+              `).join('')
+              : '<p>No 3D model available.</p>'
+            }
+          </div>
+
         </div>
       </div>
     `;
