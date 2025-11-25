@@ -7,6 +7,8 @@
   const preloader = document.getElementById('analysisPreloader');
   const analysisProgress = document.getElementById('analysisProgress');
   const modelContainer = document.getElementById('modelContainer');
+  const leftBox = document.getElementById('leftBox');
+  const rightBox = document.getElementById('rightBox');
 
   function resetRight() {
     preloader.style.display = 'none';
@@ -19,6 +21,15 @@
   imageInput.addEventListener('change', function(e) {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
+
+    // Show left and right boxes when an image is uploaded
+    leftBox.style.display = 'block';
+    rightBox.style.display = 'block';
+
+    // Scroll down to the analysis area
+    setTimeout(() => {
+      rightBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
 
     // Show preview on left
     const reader = new FileReader();
