@@ -92,5 +92,5 @@ MIT License
 For questions or support:
 
 - Project lead: Nevcan Uludaş  
-- Email: nev@gue.com 
-- Website: www.wetnote.com[www.wetnote.com]
+- Email: [nev@gue.com](nev@gue.com)
+- Website: [wetnote.com](www.wetnote.com)
