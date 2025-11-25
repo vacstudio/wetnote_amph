@@ -1,0 +1,75 @@
+# Data Files
+data/models3d/
+
+# Node modules (if you ever add tooling)
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / system files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+/dist/
+/build/
+/out/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# VSCode settings
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.next/
+.nuxt/
+.vercel/
+
+# Python (if ever used)
+__pycache__/
+*.pyc
+
+# Mac Zip metadata
+__MACOSX/
+
+# Ignore model files if needed
+*.glb
+*.obj
+*.fbx
+
+# Ignore large raw data
+raw_data/
+backup/
+
+# Allow assets folder but ignore backups
+assets/*
+!assets/**/*.svg
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.jpeg
+!assets/**/*.gif
+!assets/**/*.webp
+!assets/**/*.mp4
+!assets/**/*.mp3
+!assets/**/*.wav
+!assets/**/*.ogg
+!assets/**/*.flac
+!assets/**/*.glb
+!assets/**/*.obj
+!assets/**/*.fbx
