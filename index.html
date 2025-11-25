@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amphora Types</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/select2.css" />
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand px-5">
+    <a class="navbar-item has-text-white" href="index.html">
+      <i class="fa-solid fa-trophy mr-2"></i>
+      <strong>WetNote</strong>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">Home</a>
+      <a class="navbar-item" href="documentation.html">Documentation</a>
+      <a class="navbar-item" href="catalogue.html">Catalogue</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="jobs.html">Jobs</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="report.html">Report an issue</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-info" href="amphorai.html"><strong>AmphorAI</strong></a>
+          <a class="button is-light" href="login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-5 is-offset-1">
+        <h1 class="title mb-4">Amphora Typology Database</h1>
+        <p class="subtitle">Amphora Identification with 3D Model Matching</p>
+        <p>The Amphora Typology Database is designed to support archaeologists, researchers, museum professionals, underwater survey teams, and enthusiasts who need a fast and reliable way to identify ancient amphoras.</p>
+        <br>
+        <p>Use the <a href="catalogue.html">Catalogue</a> page to browse hundreds of amphora types organized by shape and typology, rim and shoulder form, handle profile and section, neck, body, and base shape, chronology and production region, fabric and dimensions.</p>
+        <br>
+        <p>Upload a photo of an amphora, and <a href="amphorai.html">AmphorAI</a> will match it to the closest known model in our dataset using machine learning and computer vision.</p>
+        <hr>
+        <div class="has-text-centered mt-4">
+          <a class="button is-success mr-3" href="catalogue.html">Visit Catalogue</a>
+          <a class="button is-info" href="amphorai.html">Upload Image</a>
+        </div>
+      </div>
+      
+      <div class="column is-4 is-offset-1">
+        <h2 class="title is-4">See It in Action</h2>
+        <div class="box">
+          <model-viewer src="data/models3d/dressel20/Dressel_20_D_001.glb" auto-rotate="" auto-rotate-delay="0" rotation-per-second="60deg" camera-controls="" camera-orbit="90deg" ar-status="not-presenting" style="width: 100%; height: 400px; background-color: #2e333d"></model-viewer>
+          <p class="has-text-grey has-text-centered mt-3">
+            <a class="has-text-info" href="https://archaeologydataservice.ac.uk/archives/view/archaide_2019/downloads_amphora.cfm?amph=Agora_F65_66_DR571" target="_blank">
+              <strong>Agora F65 66 DR571</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>WetNote</strong> by <a href="https://nevcan.com" target="_blank">Nevcan Uludaş</a>.
+      The source code is licensed <a href="https://opensource.org/license/mit" target="_blank">MIT</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

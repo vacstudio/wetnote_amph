@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amphora Types</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/select2.css" />
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand px-5">
+    <a class="navbar-item has-text-white" href="index.html">
+      <i class="fa-solid fa-trophy mr-2"></i>
+      <strong>WetNote</strong>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">Home</a>
+      <a class="navbar-item" href="documentation.html">Documentation</a>
+      <a class="navbar-item" href="catalogue.html">Catalogue</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="jobs.html">Jobs</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="report.html">Report an issue</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-info" href="amphorai.html"><strong>AmphorAI</strong></a>
+          <a class="button is-light" href="login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section">
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <h1 class="title mb-4">Documentation</h1>
+        <p class="mb-5">
+          This documentation provides a practical guide to understanding amphora morphology, typological comparison, and effective use of the filtering system. 
+          By learning how each shape component is defined — rim, neck, body, base, and handles — you can navigate the catalogue efficiently and identify amphora types with greater accuracy. 
+          Use this page as a reference while exploring the Amphora Typology Database or working on your own ceramic analyses.
+        </p>
+        <ul>
+          <li class="mb-3"><strong>1. Perform a morphological description</strong> — Identify and describe all visible components of the amphora (rim, neck, body, base, handles). This involves documenting the external shape and its defining features in detail.</li>
+          <li class="mb-3"><strong>2. Compare the form with known typologies</strong> — Consult regional and chronological literature to check similarities between your amphora and established types.</li>
+          <li class="mb-3"><strong>3. Assign to an existing type or define a variant/new type</strong> — Determine whether the amphora matches a recognized typology or represents a variation or new form.</li>
+          <li class="mb-3"><strong>4. Date the amphora using context and literature</strong> — Establish a chronological range supported by archaeological context, parallels, and published research. Add brief interpretative notes if needed.</li>
+          <li class="mb-3"><strong>5. Create a catalogue entry and academic description</strong> — Record the amphora following academic standards, including dimensions, morphology, typology, dating, and references suitable for publication.</li>
+        </ul>
+
+        <hr>
+
+        <div class="content mt-4">
+          <h3 class="title is-4">How to Use Filters Effectively</h3>
+          <p>To help you identify amphora types accurately, the following guide explains each morphological element used in the filtering system. Understanding these forms will allow you to narrow down typologies quickly and consistently.</p>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Rim Types</h4>
+            <ul>
+              <li>
+                <img src="img/filter/rim_rounded.jpg" alt="Rounded Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Rounded:</strong> Smooth, curved rim profile without sharp edges.
+              </li>
+              <li>
+                <img src="img/filter/rim_beaded.jpg" alt="Beaded Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Beaded:</strong> Rim with bead-like rounded swelling.
+              </li>
+              <li>
+                <img src="img/filter/rim_flaring.jpg" alt="Flaring Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Flaring:</strong> Rim that widens outward like a funnel.
+              </li>
+              <li>
+                <img src="img/filter/rim_everted.jpg" alt="Everted Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Everted:</strong> Rim turned outward sharply or gently.
+              </li>
+              <li>
+                <img src="img/filter/rim_collar.jpg" alt="Collared Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Collared:</strong> Rim with a distinct projecting collar or thickened band.
+              </li>
+              <li>
+                <img src="img/filter/rim_triangular.jpg" alt="Triangular Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Triangular:</strong> Rim profile that forms a triangular cross‑section.
+              </li>
+              <li>
+                <img src="img/filter/rim_flanged.jpg" alt="Flanged Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
+                <strong>Flanged:</strong> Rim with a clear horizontal or diagonal flange.
+              </li>
+            </ul>
+          </div>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Neck Types</h4>
+            <ul>
+              <li><strong>Short/Narrow:</strong> A compressed neck that is small in height and tighter than the rim.</li>
+              <li><strong>Long/Cylindrical:</strong> A tall, tube‑like neck with generally uniform width.</li>
+              <li><strong>Concave:</strong> Neck curves inward, forming an hourglass‑like profile.</li>
+              <li><strong>Wide/Trumpet:</strong> Broad upper neck that widens toward the rim.</li>
+            </ul>
+          </div>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Shoulder Types</h4>
+            <ul>
+              <li><strong>Rounded:</strong> Smooth, continuous curve transitioning from neck to body.</li>
+              <li><strong>Carinated:</strong> Sharp angular break between neck and body.</li>
+              <li><strong>Soft-rounded:</strong> Gentle curve, not fully rounded nor angular.</li>
+              <li><strong>None/Straight:</strong> Minimal shoulder definition; almost vertical profile.</li>
+            </ul>
+          </div>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Handle Features</h4>
+            <ul>
+              <li><strong>Handle Profile – Arched:</strong> A smooth arching curve from rim/shoulder to body.</li>
+              <li><strong>Handle Profile – Curved:</strong> A less symmetrical curve, often asymmetrical.</li>
+              <li><strong>Handle Section – Round:</strong> Circular cross‑section.</li>
+              <li><strong>Handle Section – Oval:</strong> Flattened or elongated oval cross‑section.</li>
+              <li><strong>Handle Section – Rectangular:</strong> Thick, slab‑like section.</li>
+            </ul>
+          </div>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Body Types</h4>
+            <ul>
+              <li><strong>Globular:</strong> Spherical body shape.</li>
+              <li><strong>Biconical:</strong> Two cones meeting at a mid‑point, forming a sharp profile break.</li>
+              <li><strong>Ovoid:</strong> Egg‑shaped, more elongated than globular.</li>
+              <li><strong>Cylindrical:</strong> Straight vertical walls with minimal curvature.</li>
+            </ul>
+          </div>
+
+          <div class="notification mt-6">
+            <h4 class="title is-5">Base Types</h4>
+            <ul>
+              <li><strong>Rounded Basal Point:</strong> Typical pointed base used for stacking in ships.</li>
+              <li><strong>Flat:</strong> Flat resting base, common in later periods.</li>
+              <li><strong>Knobbed:</strong> Slight protruding knob at the base.</li>
+              <li><strong>Ring Foot:</strong> Circular base ring supporting upright placement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>WetNote</strong> by <a href="https://nevcan.com" target="_blank">Nevcan Uludaş</a>.
+      The source code is licensed <a href="https://opensource.org/license/mit" target="_blank">MIT</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
