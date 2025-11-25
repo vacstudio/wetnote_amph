@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amphora Types</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/select2.css" />
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand px-5">
+    <a class="navbar-item has-text-white" href="index.html">
+      <i class="fa-solid fa-trophy mr-2"></i>
+      <strong>WetNote</strong>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">Home</a>
+      <a class="navbar-item" href="documentation.html">Documentation</a>
+      <a class="navbar-item" href="catalogue.html">Catalogue</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="jobs.html">Jobs</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfbTx27QH2m3SD-bia105rbArpOyCsnMBsDlagzJQ3V-eI3wA/viewform?usp=publish-editor" target="_blank">Report an issue</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-info" href="amphorai.html"><strong>AmphorAI</strong></a>
+          <a class="button is-light" href="login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container content has-text-light">
+
+    <h1 class="title has-text-white">About WetNote Amphora Catalogue</h1>
+    <p>
+      WetNote is a growing digital platform designed to support divers, archaeologists,
+      researchers, and conservation teams working in the aquatic world. The project begins
+      with a specialized focus: an advanced <strong>Amphora Typology Catalogue</strong> built
+      to help users explore, compare, and understand ancient amphoras using structured data,
+      drawings, images, and 3D models.
+    </p>
+
+    <h2 class="subtitle has-text-white mt-5">Why This Catalogue?</h2>
+    <p>
+      Amphoras are key to understanding ancient trade, production, and maritime activity.
+      However, identifying them is often slow and requires years of typological familiarity.
+      This catalogue aims to simplify that process by providing:
+    </p>
+    <ul>
+      <li>✔ A structured typology browser with detailed filters</li>
+      <li>✔ Drawings, photographs, and SVG silhouettes</li>
+      <li>✔ Interactive 3D models for visual comparison</li>
+      <li>✔ Metadata and measurements linked to archaeological sources</li>
+    </ul>
+
+    <h2 class="subtitle has-text-white mt-5">Beyond Amphoras: A Platform for Aquatic Projects</h2>
+    <p>
+      Although our journey begins with amphora typology, WetNote is designed to grow into a
+      wider project-management ecosystem for underwater work. In the future, the platform will
+      support tools for:
+    </p>
+    <ul>
+      <li>• Cave survey and mapping projects</li>
+      <li>• Ghost-net and marine debris documentation</li>
+      <li>• Conservation monitoring</li>
+      <li>• Maritime archaeology fieldwork</li>
+      <li>• Photogrammetry processing and dataset management</li>
+    </ul>
+    <p>
+      Each module will be designed to help field teams collect, organize, analyze, and share
+      their expedition data from a single unified platform.
+    </p>
+
+    <h2 class="subtitle has-text-white mt-5">What Is AmphorAI?</h2>
+    <p>
+      AmphorAI is an upcoming feature that will use image analysis and machine learning to help
+      users quickly identify amphoras from photos. It will compare the uploaded image against
+      the models in our dataset and return the closest typological matches. AmphorAI is still
+      in development but represents the future direction of the platform—combining traditional
+      archaeology with modern computational tools.
+    </p>
+
+    <h2 class="subtitle has-text-white mt-5">About the Project</h2>
+    <p>
+      WetNote Amphora Catalogue is developed by <strong>Nevcan Uludaş</strong> as part of an
+      academic project in underwater archaeology. With over a decade of expertise in scientific
+      diving, underwater documentation, and exploration projects, the platform is built upon
+      both field experience and digital innovation.
+    </p>
+
+    <h2 class="subtitle has-text-white mt-5">Credits & Collaboration</h2>
+    <p>
+      The project acknowledges the contribution of open-access archaeological datasets,
+      academic research, and 3D repositories that support cultural heritage preservation.
+      We continue to invite volunteers and specialists who wish to refine typologies,
+      expand datasets, or collaborate on digital heritage tools.
+    </p>
+
+    <h2 class="subtitle has-text-white mt-5">Contact</h2>
+    <p>
+      For collaboration, academic use, or future project participation, please reach out via
+      the <a href="contact.html">Contact page</a>.
+    </p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>WetNote</strong> by <a href="https://nevcan.com" target="_blank">Nevcan Uludaş</a>.
+      The source code is licensed <a href="https://opensource.org/license/mit" target="_blank">MIT</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

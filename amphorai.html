@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Amphora Types</title>
+  <title>AmphorAI Mock-up</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- STYLES -->
@@ -66,50 +66,64 @@
 <div class="container">
   <section class="section">
     <div class="columns is-multiline">
-      <div class="column is-12 has-text-centered">
-        <h1 class="title is-3">Contact Us</h1>
-        <p class="mb-5">
-          If you have questions, feedback, or would like to contribute to the Amphora Typology Database, feel free to reach out through any of the following channels.
-        </p>
 
-        <div class="buttons is-centered my-6">
-          <a class="button is-link is-light px-6" href="mailto:nev@gue.com">
-            <span class="icon is-size-1"><i class="fas fa-envelope"></i></span>
-            <span>Email</span>
-          </a>
+      <!-- IMAGE UPLOAD -->
+      <div class="column is-6 is-offset-3 has-text-centered p-6 my-6">
+        <h1 class="title has-text-white">Image Analysis (Mock Preview)</h1>
+        <p class="has-text-grey-light mb-4">Upload an amphora photo to see how AmphorAI will work in the future.<br>Your image is <strong>not saved</strong> and disappears when the page reloads.</p>
 
-          <a class="button is-link px-6" href="https://hihello.com/p/2a5123b0-641a-4681-8852-c963488baf28" target="_blank">
-            <span class="icon is-size-1"><i class="fas fa-hand"></i></span>
-            <span>HiHello</span>
-          </a>
-
-          <a class="button is-info px-6" href="https://www.linkedin.com/in/nevcanuludas" target="_blank">
-            <span class="icon is-size-1"><i class="fab fa-linkedin"></i></span>
-            <span>LinkedIn</span>
-          </a>
+        <div class="box has-background-dark mt-6">
+          <div class="file is-info is-boxed is-fullwidth">
+            <label class="file-label">
+              <input class="file-input" type="file" id="imageInput" accept="image/*">
+              <span class="file-cta">
+                <span class="file-icon is-size-1"><i class="fas fa-upload"></i></span>
+                <span class="file-label">Choose an image…</span>
+              </span>
+            </label>
+          </div>
         </div>
-
-        <div class="buttons is-centered my-6">
-          <a class="button is-warning px-6" href="https://instagram.com/nevcanuludas" target="_blank">
-            <span class="icon is-size-1"><i class="fab fa-instagram"></i></span>
-            <span>Instagram</span>
-          </a>
-
-          <a class="button is-dark px-6" href="https://github.com/nevcanuludas" target="_blank">
-            <span class="icon is-size-1"><i class="fab fa-github"></i></span>
-            <span>GitHub</span>
-          </a>
-
-          <a class="button is-primary px-6" href="https://scholar.google.com/citations?user=DzEc7TgAAAAJ&hl=tr" target="_blank">
-            <span class="icon is-size-1"><i class="fab fa-google-scholar"></i></span>
-            <span>Google Scholar</span>
-          </a>
-        </div>
-
-        <p class="mt-5">
-          You can also follow the project updates and announcements on our social media channels.
-        </p>
       </div>
+
+      <!-- LEFT SIDE: preview -->
+      <div class="column is-6">
+        <div id="leftBox" class="box has-background-dark">
+          <h2 class="title is-5 has-text-white">Uploaded Image</h2>
+          <figure id="uploadedImageContainer" class="image" style="display:none; width:100%; height:517px; background:#111; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img id="uploadedImage" src="" alt="Uploaded preview" style="max-width:100%; max-height:100%; object-fit:contain; display:block;" />
+            <figcaption id="uploadedCaption" class="has-text-grey-light is-size-7 mt-2"></figcaption>
+          </figure>
+          <p id="noImageText" class="has-text-grey-light">No image uploaded yet.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: analysis -->
+      <div class="column is-6">
+        <div id="rightBox" class="box has-background-dark">
+          <h2 class="title is-5 has-text-white">Analysis (Mock)</h2>
+
+          <div id="analysisPreloader" style="display:none;">
+            <p class="has-text-grey-light">Analyzing image…</p>
+            <progress id="analysisProgress" class="progress is-info" max="100" value="0">0%</progress>
+          </div>
+
+          <div id="modelContainer" style="display:none; margin-top:1rem;">
+            <p class="has-text-grey-light mb-3">Closest match (mock):</p>
+            <model-viewer id="resultModel" src="data/models3d/dressel20/Dressel_20_D_001.glb"
+                          alt="Amphora model"
+                          camera-controls
+                          auto-rotate
+                          style="width:100%; height:420px; background:#111;">
+            </model-viewer>
+            <div id="resultInfo" class="content has-text-grey-light mt-3">
+              <strong>Match:</strong> Dressel 20<br>
+              <strong>Confidence:</strong> 87% (mock)
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 </div>
@@ -123,6 +137,9 @@
     </p>
   </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script src="script/amphorai.js"></script>
 
 </body>
 </html>
