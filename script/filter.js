@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const rimFilter = document.getElementById('filterRim');
   const shoulderFilter = document.getElementById('filterShoulder');
+  const handlesProfileFilter = document.getElementById('filterHandlesProfile');
+  const handlesSectionFilter = document.getElementById('filterHandlesSection');
+  const neckFilter = document.getElementById('filterNeck');
+  const bodyFilter = document.getElementById('filterBody');
+  const baseFilter = document.getElementById('filterBase');
   const cards = document.querySelectorAll('.amphora-card');
 
   // Normalization function
@@ -58,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
   $(document).on('click', '#clearFilters', () => {
     $('#filterRim').val('').trigger('change');
     shoulderFilter.value = '';
+    handlesProfileFilter.value = '';
+    handlesSectionFilter.value = '';
+    neckFilter.value = '';
+    bodyFilter.value = '';
+    baseFilter.value = '';
     filterCards();
   });
 });
