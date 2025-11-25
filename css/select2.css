@@ -1,0 +1,28 @@
+/* Make Select2 match Bulma input style */
+.select2-container--default .select2-selection--single {
+  background-color: #14161a; /* Bulma input background */
+  border: 1px solid #353a46; /* Bulma input border */
+  border-radius: 6px; /* Bulma default radius */
+  height: 2.5em; /* Bulma input height */
+  padding: 0.25em 0.5em 0.25em 0.25em; /* match Bulma padding */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #4259ff transparent transparent transparent; /* arrow color */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 1.5;
+  color: white; /* Bulma text color */
+}
+
+.select2-dropdown {
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+  max-height: 500px; /* limit height */
+}

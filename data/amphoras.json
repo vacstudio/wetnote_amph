@@ -22,15 +22,24 @@
       "fabricCode": "FAB-BT-A"
     },
 
-    "morphology": {
-      "rim": "Thick rounded rim",
-      "neck": "Short neck",
-      "handles": "Large vertical handles, attached from shoulder to rim",
-      "body": "Globular",
-      "shoulder": "Soft rounded shoulder",
-      "base": "Pointed base",
-      "maximumDiameter": "At the body midsection",
-      "surfaceTreatment": "Often ribbed body"
+    "characteristics": {
+      "rim": "The rim is gently rounded.",
+      "shoulder": "There is no shoulder: the body of the amphora is uninterrupted.",
+      "handleProfile": "The handles gently curve from the neck to shoulder.",
+      "handleSection": "The handle is circular, or nearly circular, in section.",
+      "neck": "The neck is disproportionately short and/or narrow relative to the size of the amphora.",
+      "body": "The body is wide, round and bag-shaped or globular.",
+      "base": "The base extends into a small, pronounced point - not as long as a spike.",
+      "capacityMinLT": 70,
+      "capacityMaxLT": 75,
+      "heightMinCM": 70,
+      "heightMaxCM": 97,
+      "widthMinCM": 56,
+      "widthMaxCM": 66,
+      "rimDiameterMinCM": 18,
+      "rimDiameterMaxCM": 20,
+      "fabric": "Dressel 20 fabric",
+      "surfaceTreatment": ""
     },
 
     "measurements": {
@@ -59,7 +68,10 @@
 
     "media": {
       "images": [
-        "data/images/dressel20/PEC16.jpg"
+        {
+          "src": "data/images/dressel20/PEC16.jpg",
+          "caption": "Courtesy of Museu Nacional Arqueològic de Tarragona (Dottsa Pilar Sada)\nDavid Williams"
+        }
       ],
       "drawings": [
         "data/drawings/dressel20/DR140.jpg",
@@ -76,8 +88,22 @@
     },
 
     "filterData": {
-      "rim": "rounded",
-      "shoulder": "rounded"
+      "rim": "Rounded",
+      "shoulder": "None/smooth",
+      "handleProfile": "Curved",
+      "handleSection": "Round",
+      "neck": "Short/narrow",
+      "body": "Globular",
+      "base": "Rounded basal point",
+      "capacity_min_lt": 70,
+      "capacity_max_lt": 75,
+      "height_min_cm": 70,
+      "height_max_cm": 97,
+      "width_min_cm": 56,
+      "width_max_cm": 66,
+      "rimDiameter_min_cm": 18,
+      "rimDiameter_max_cm": 20,
+      "fabric": "Dressel 20 fabric"
     }
   }
 ]

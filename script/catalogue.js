@@ -11,7 +11,7 @@ fetch('../data/amphoras.json')
         <div class="card amphora-card" data-filter-rim="${amphora.filterData.rim}" data-filter-shoulder="${amphora.filterData.shoulder}">
           <div class="card-image">
             <figure class="image is-4by3 amphora-visual has-background-white" style="max-height:250px; overflow:hidden;">
-              <img class="amphora-thumb" src="${amphora.media.images[0]}" alt="${amphora.name}" style="width:100%; height:100%; object-fit: contain;">
+              <img class="amphora-thumb" src="${amphora.media.images[0].src}" alt="${amphora.name}" style="width:100%; height:100%; object-fit: contain;">
               <model-viewer class="amphora-3d" src="${amphora.media.models3d ? amphora.media.models3d[0] : ''}"
                 alt="${amphora.name}"
                 camera-controls
@@ -19,7 +19,7 @@ fetch('../data/amphoras.json')
                 auto-rotate
                 exposure="1"
                 camera-orbit="90deg 75deg auto"
-                style="display:none; width:100%; height:100%; background-color:#333; object-fit: contain;">
+                style="display:none; width:100%; height:100%; background-color:#2e333d; object-fit: contain;">
               </model-viewer>
             </figure>
           </div>

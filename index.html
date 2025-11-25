@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <title>Amphora Types</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/select2.css" />
+
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
@@ -19,7 +24,7 @@
     <div class="field mr-2">
       <label class="label">Rim Type</label>
       <div class="control">
-        <select id="filterRim" class="rim-select" style="width:200px;">
+        <select id="filterRim" class="rim-select" style="width:170px;">
           <option value="">Select</option>
           <option value="beaded" data-img="img/filter/rim_beaded.jpg">Beaded</option>
           <option value="biconical" data-img="img/filter/rim_biconical.jpg">Biconical</option>
@@ -28,7 +33,7 @@
           <option value="flanged" data-img="img/filter/rim_flanged.jpg">Flanged</option>
           <option value="flaring" data-img="img/filter/rim_flaring.jpg">Flaring</option>
           <option value="none" data-img="img/filter/rim_none.jpg">None</option>
-          <option value="pulley-wheel" data-img="img/filter/rim_pulleyWheel.jpg">Pulley wheel</option>
+          <option value="pulley-wheel" data-img="img/filter/rim_pulleyWheel.jpg">Pulley Wheel</option>
           <option value="rounded" data-img="img/filter/rim_rounded.jpg">Rounded</option>
           <option value="triangular" data-img="img/filter/rim_triangular.jpg">Triangular</option>
         </select>
@@ -143,7 +148,7 @@
     </div>
 
     <div class="field ml-2" style="align-self:flex-end; padding-bottom: 13px;">
-      <button id="clearFilters" class="button is-dark">
+      <button id="clearFilters" class="button is-link is-light">
         <span>Clear Filters</span>
       </button>
     </div>
