@@ -8,7 +8,16 @@ fetch('../data/amphoras.json')
       col.className = "column is-one-quarter";
 
       col.innerHTML = `
-        <div class="card amphora-card" data-filter-rim="${amphora.filterData.rim}" data-filter-shoulder="${amphora.filterData.shoulder}">
+        <div 
+          class="card amphora-card" 
+          data-filter-rim="${amphora.filterData.rim}" 
+          data-filter-shoulder="${amphora.filterData.shoulder}"
+          data-filter-handle-profile="${amphora.filterData.handleProfile}"
+          data-filter-handle-section="${amphora.filterData.handleSection}"
+          data-filter-neck="${amphora.filterData.neck}"
+          data-filter-body="${amphora.filterData.body}"
+          data-filter-base="${amphora.filterData.base}"
+        >
           <div class="card-image">
             <figure class="image is-4by3 amphora-visual has-background-white" style="max-height:250px; overflow:hidden;">
               <img class="amphora-thumb" src="${amphora.media.images[0].src}" alt="${amphora.name}" style="width:100%; height:100%; object-fit: contain;">

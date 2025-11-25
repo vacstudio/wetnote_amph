@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const rimFilter = document.getElementById('filterRim');
   const shoulderFilter = document.getElementById('filterShoulder');
-  const handlesProfileFilter = document.getElementById('filterHandlesProfile');
-  const handlesSectionFilter = document.getElementById('filterHandlesSection');
+  const handleProfileFilter = document.getElementById('filterHandleProfile');
+  const handleSectionFilter = document.getElementById('filterHandleSection');
   const neckFilter = document.getElementById('filterNeck');
   const bodyFilter = document.getElementById('filterBody');
   const baseFilter = document.getElementById('filterBase');
@@ -17,14 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
   function filterCards() {
     const rimValue = normalize($('#filterRim').val());
     const shoulderValue = normalize(shoulderFilter.value);
+    const handleProfileValue = normalize(handleProfileFilter.value);
+    const handleSectionValue = normalize(handleSectionFilter.value);
+    const neckValue = normalize(neckFilter.value);
+    const bodyValue = normalize(bodyFilter.value);
+    const baseValue = normalize(baseFilter.value);
 
     cards.forEach(card => {
       const rim = normalize(card.dataset.filterRim);
       const shoulder = normalize(card.dataset.filterShoulder);
+      const handleProfile = normalize(card.dataset.filterHandleProfile);
+      const handleSection = normalize(card.dataset.filterHandleSection);
+      const neck = normalize(card.dataset.filterNeck);
+      const body = normalize(card.dataset.filterBody);
+      const base = normalize(card.dataset.filterBase);
 
       const show =
         (!rimValue || rim === rimValue) &&
-        (!shoulderValue || shoulder === shoulderValue);
+        (!shoulderValue || shoulder === shoulderValue) &&
+        (!handleProfileValue || handleProfile === handleProfileValue) &&
+        (!handleSectionValue || handleSection === handleSectionValue) &&
+        (!neckValue || neck === neckValue) &&
+        (!bodyValue || body === bodyValue) &&
+        (!baseValue || base === baseValue);
 
       card.style.display = show ? '' : 'none';
     });
@@ -38,6 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#filterRim').on('select2:select', filterCards);
   $('#filterRim').on('select2:clear', filterCards);
   shoulderFilter.addEventListener('change', filterCards);
+  handleProfileFilter.addEventListener('change', filterCards);
+  handleSectionFilter.addEventListener('change', filterCards);
+  neckFilter.addEventListener('change', filterCards);
+  bodyFilter.addEventListener('change', filterCards);
+  baseFilter.addEventListener('change', filterCards);
 
   // Select2 initialization for Rim filter
   function formatRim(option) {
@@ -63,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
   $(document).on('click', '#clearFilters', () => {
     $('#filterRim').val('').trigger('change');
     shoulderFilter.value = '';
-    handlesProfileFilter.value = '';
-    handlesSectionFilter.value = '';
+    handleProfileFilter.value = '';
+    handleSectionFilter.value = '';
     neckFilter.value = '';
     bodyFilter.value = '';
     baseFilter.value = '';
