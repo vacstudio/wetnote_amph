@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amphora Model Training</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/select2.css" />
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand px-5">
+    <a class="navbar-item has-text-white" href="index.html">
+      <i class="fa-solid fa-trophy mr-2"></i>
+      <strong>WetNote</strong>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">Home</a>
+      <a class="navbar-item" href="documentation.html">Documentation</a>
+      <a class="navbar-item" href="catalogue.html">Catalogue</a>
+      <a class="navbar-item" href="map.html">Map</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="jobs.html">Jobs</a>
+          <a class="navbar-item" href="model-training.html">Model Training</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfbTx27QH2m3SD-bia105rbArpOyCsnMBsDlagzJQ3V-eI3wA/viewform?usp=publish-editor" target="_blank">Report an issue</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-info" href="amphorai.html"><strong>AmphorAI</strong></a>
+          <a class="button is-light" href="login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Model Training -->
+<main class="container">
+  <section class="section">
+    <h1 class="title has-text-white">Model Training & Typology Practice</h1>
+    <p class="has-text-grey-light mb-5">
+      This page allows users to practice amphora typology while simultaneously helping improve the AmphorAI model. 
+      You will be shown amphora images and asked to identify their type or key morphological features. 
+      Most questions are known‑answer training samples (used to score your accuracy). A few questions are unknown to the model and help us collect anonymized typology data.
+    </p>
+
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <!-- Training Box -->
+        <div id="trainingBox" class="box has-background-dark has-text-centered">
+    
+          <div id="questionArea">
+            <h2 class="subtitle has-text-white">Question <span id="questionNumber">1</span> / 10</h2>
+    
+            <!-- Amphora image shown here -->
+            <figure class="image is-3by4 mb-4" style="width:300px; margin:0 auto;">
+              <img id="trainingImage" src="img/dummy/Richborough 527 Amphora.jpeg" alt="Training Amphora">
+            </figure>
+    
+            <!-- Question text -->
+            <p id="trainingQuestion" class="has-text-white mb-3">
+              What amphora type do you think this is?
+            </p>
+    
+            <!-- Answer select -->
+            <div class="field">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="trainingAnswer">
+                    <option value="">Select an answer</option>
+                    <option value="Dressel 20">Dressel 20</option>
+                    <option value="Dressel 1A">Dressel 1A</option>
+                    <option value="Late Roman 1">Late Roman 1</option>
+                    <option value="Gaza Jar">Gaza Jar</option>
+                    <option value="Unknown">I am not sure</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Submit button -->
+            <button id="submitTrainingAnswer" class="button is-primary mt-3">Submit Answer</button>
+          </div>
+    
+          <!-- Results area (hidden by default) -->
+          <div id="trainingResult" class="has-text-white mt-5" style="display:none;">
+            <h2 class="title is-4">Your Score</h2>
+            <p class="has-text-grey-light">
+              You answered <strong id="correctCount">0</strong> out of <strong>8</strong> known‑answer questions correctly.
+            </p>
+            <p class="has-text-grey-light mt-3">
+              The remaining <strong>2</strong> answers were recorded anonymously to improve the AmphorAI model.
+            </p>
+    
+            <button id="restartTraining" class="button is-info mt-4">Restart Training</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+    <!-- Information panel -->
+    <div class="content has-text-grey-light mt-6">
+      <h3 class="title is-5 has-text-white">How This Training Works</h3>
+      <ul>
+        <li><strong>8 known-answer questions</strong> evaluate the user’s typology accuracy and learning progress.</li>
+        <li><strong>2 unknown-answer questions</strong> are used for model improvement – these are real amphoras without confirmed typology.</li>
+        <li>All user inputs are <strong>anonymous</strong> and only used for dataset enhancement.</li>
+        <li>Your typology skills improve with practice, while AmphorAI becomes more accurate over time thanks to community input.</li>
+      </ul>
+    </div>
+
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>WetNote</strong> by <a href="https://nevcan.com" target="_blank">Nevcan Uludaş</a>.
+      The source code is licensed <a href="https://opensource.org/license/mit" target="_blank">MIT</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="script/model-training.js"></script>
+
+</body>
+</html>
