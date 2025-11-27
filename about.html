@@ -35,29 +35,32 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="index.html">Home</a>
-      <a class="navbar-item" href="documentation.html">Documentation</a>
-      <a class="navbar-item" href="catalogue.html">Catalogue</a>
+      <a class="navbar-item" href="index.html" data-page="index">Home</a>
+      <a class="navbar-item" href="documentation.html" data-page="documentation">Documentation</a>
+      <a class="navbar-item" href="catalogue.html" data-page="catalogue">Catalogue</a>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">Tools</a>
+        <a class="navbar-link" data-page="tools">Tools</a>
         
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="amphorai.html">✨ AmphorAI</a>
-          <a class="navbar-item" href="map.html">🗺️ Map</a>
-          <a class="navbar-item" href="model-training.html">🧠 Model Training</a>
+          <a class="navbar-item" href="amphorai.html" data-page="amphorai">✨ AmphorAI</a>
+          <a class="navbar-item" href="map.html" data-page="map">🗺️ Map</a>
+          <a class="navbar-item" href="model-training.html" data-page="model-training">🧠 Model Training</a>
         </div>
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">More</a>
+        <a class="navbar-link" data-page="more">More</a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="about.html">About</a>
-          <a class="navbar-item" href="jobs.html">Jobs</a>
-          <a class="navbar-item" href="contact.html">Contact</a>
+          <a class="navbar-item" href="about.html" data-page="about">About</a>
+          <a class="navbar-item" href="jobs.html" data-page="jobs">Jobs</a>
+          <a class="navbar-item" href="contact.html" data-page="contact">Contact</a>
           <hr class="navbar-divider">
-          <a class="navbar-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfbTx27QH2m3SD-bia105rbArpOyCsnMBsDlagzJQ3V-eI3wA/viewform?usp=publish-editor" target="_blank">Report an issue</a>
+          <a class="navbar-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfbTx27QH2m3SD-bia105rbArpOyCsnMBsDlagzJQ3V-eI3wA/viewform?usp=publish-editor" target="_blank">
+            <i class="fa-solid fa-bug"></i>
+            <span>Report an issue</span>
+          </a>
         </div>
       </div>
     </div>
@@ -158,6 +161,9 @@
     </p>
   </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script type="module" src="script/main.js"></script>
 
 </body>
 </html>
