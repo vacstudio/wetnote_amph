@@ -81,7 +81,7 @@
   <div class="level">
     <div class="level-left">
       <div class="level-item">
-        <h3 class="title is-5">Filter Amphoras by Characteristics</h3>
+        <h3 class="title is-5 has-text-info">Filter Amphoras by Characteristics</h3>
       </div>
     </div>
 
@@ -100,7 +100,7 @@
               <span>3 Columns</span>
             </button>
 
-            <button id="toggleAdvancedFilters" class="button is-link is-light">
+            <button id="toggleAdvancedFilters" class="button is-info is-light">
               <i class="fa-solid fa-filter mr-2"></i>
               <span>Advanced Filters</span>
             </button>
@@ -246,8 +246,58 @@
   </div>
 
   <!-- ADVANCED FILTERS -->
-  <div id="advancedFilterBox" class="mt-5" style="display:none; overflow:hidden;">
-    <h3 class="title is-5">Filter Amphoras by date, location and contents</h3>
+  <div id="advancedFilterBox" class="" style="display:none; overflow:hidden;">
+    <h3 class="title is-5 mt-5 has-text-info">Filter Amphoras by Dimentions</h3>
+
+    <div class="field is-horizontal">
+      <!-- Height -->
+      <div class="field mr-2">
+        <label class="label">Height greater than (cm)</label>
+        <div class="control">
+          <input id="filterHeightMin" class="input" type="number" placeholder="e.g. 45">
+        </div>
+      </div>
+
+      <div class="field mr-2">
+        <label class="label">Height less than (cm)</label>
+        <div class="control">
+          <input id="filterHeightMax" class="input" type="number" placeholder="e.g. 45">
+        </div>
+      </div>
+
+      <!-- Width -->
+      <div class="field mr-2">
+        <label class="label">Width greater than (cm)</label>
+        <div class="control">
+          <input id="filterWidthMin" class="input" type="number" placeholder="e.g. 45">
+        </div>
+      </div>
+
+      <div class="field mr-2">
+        <label class="label">Width less than (cm)</label>
+        <div class="control">
+          <input id="filterWidthMax" class="input" type="number" placeholder="e.g. 45">
+        </div>
+      </div>
+
+      <!-- Rim Diameter -->
+      <div class="field mr-2">
+        <label class="label">Rim diameter greater than (cm)</label>
+        <div class="control">
+          <input id="filterRimDiameterMin" class="input" type="number" placeholder="e.g. 25">
+        </div>
+      </div>
+
+      <div class="field mr-2">
+        <label class="label">Rim diameter less than (cm)</label>
+        <div class="control">
+          <input id="filterRimDiameterMax" class="input" type="number" placeholder="e.g. 25">
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="title is-5 mt-5 has-text-info">Filter Amphoras by Date, Location and Contents</h3>
 
     <div class="field is-horizontal">
       <!-- Date of Production -->
