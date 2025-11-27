@@ -83,10 +83,30 @@
 
     <div class="level-right">
       <div class="level-item">
-        <div class="field is-grouped is-grouped-right mt-2">
-          <button id="toggleAdvancedFilters" class="button is-small is-link">
-            Advanced Filters
-          </button>
+        <div class="field is-grouped is-grouped-right">
+          <div class="buttons are-small">
+
+            <button id="viewGrid4" class="button is-black">
+              <i class="fa-solid fa-table-cells mr-2"></i>
+              <span>4 Columns</span>
+            </button>
+
+            <button id="viewGrid3" class="button is-black">
+              <i class="fa-solid fa-table-cells-large mr-2"></i>
+              <span>3 Columns</span>
+            </button>
+
+            <button id="toggleAdvancedFilters" class="button is-link">
+              <i class="fa-solid fa-filter mr-2"></i>
+              <span>Advanced Filters</span>
+            </button>
+
+            <button id="clearFilters" class="button is-link is-light">
+              <i class="fa-solid fa-filter-circle-xmark mr-2"></i>
+              <span>Clear Filters</span>
+            </button>
+
+          </div>
         </div>
       </div>
     </div>
@@ -219,16 +239,10 @@
       </div>
     </div>
 
-    <div class="field ml-2" style="align-self:flex-end; padding-bottom: 13px;">
-      <button id="clearFilters" class="button is-link is-light">
-        <span>Clear Filters</span>
-      </button>
-    </div>
-
   </div>
 
   <!-- ADVANCED FILTERS -->
-  <div id="advancedFilterBox" class="mt-6" style="display:none; overflow:hidden;">
+  <div id="advancedFilterBox" class="mt-5" style="display:none; overflow:hidden;">
     <h3 class="title is-5">Filter Amphoras by date, location and contents</h3>
 
     <div class="field is-horizontal">

@@ -73,5 +73,31 @@ fetch('../data/amphoras.json')
         });
       }
     });
+
+    // Grid layout switcher
+    function applyGridLayout(columns) {
+      const cards = document.querySelectorAll('#amphoraList .column');
+
+      cards.forEach(card => {
+        const figure = card.querySelector('figure.amphora-visual');
+
+        if (columns === 4) {
+          card.className = "column is-one-quarter";
+          if (figure) figure.style.maxHeight = "250px";
+        } else if (columns === 3) {
+          card.className = "column is-one-third";
+          if (figure) figure.style.maxHeight = "450px";
+        }
+      });
+    }
+
+    // Button listeners
+    document.getElementById('viewGrid4')?.addEventListener('click', () => {
+      applyGridLayout(4);
+    });
+
+    document.getElementById('viewGrid3')?.addEventListener('click', () => {
+      applyGridLayout(3);
+    });
   })
   .catch(err => console.error('Error loading amphoras.json:', err));
