@@ -7,13 +7,6 @@
 
   <!-- STYLES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/select2.css" />
-
-  <!-- SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
 <body>
 
@@ -120,105 +113,337 @@
         <div class="content mt-4">
           <h3 class="title is-4">How to Use Filters Effectively</h3>
           <p>To help you identify amphora types accurately, the following guide explains each morphological element used in the filtering system. Understanding these forms will allow you to narrow down typologies quickly and consistently.</p>
+        </div>
+      </div>
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Rim Types</h4>
-            <ul>
-              <li>
-                <img src="img/filter/rim_rounded.jpg" alt="Rounded Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Rounded:</strong> Smooth, curved rim profile without sharp edges.
-              </li>
-              <li>
-                <img src="img/filter/rim_beaded.jpg" alt="Beaded Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Beaded:</strong> Rim with bead-like rounded swelling.
-              </li>
-              <li>
-                <img src="img/filter/rim_flaring.jpg" alt="Flaring Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Flaring:</strong> Rim that widens outward like a funnel.
-              </li>
-              <li>
-                <img src="img/filter/rim_everted.jpg" alt="Everted Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Everted:</strong> Rim turned outward sharply or gently.
-              </li>
-              <li>
-                <img src="img/filter/rim_collar.jpg" alt="Collared Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Collared:</strong> Rim with a distinct projecting collar or thickened band.
-              </li>
-              <li>
-                <img src="img/filter/rim_triangular.jpg" alt="Triangular Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Triangular:</strong> Rim profile that forms a triangular cross‑section.
-              </li>
-              <li>
-                <img src="img/filter/rim_flanged.jpg" alt="Flanged Rim" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Flanged:</strong> Rim with a clear horizontal or diagonal flange.
-              </li>
-            </ul>
-          </div>
+      <!-- DATA SOURCE -->
+      <!-- https://archaeologydataservice.ac.uk/archives/view/amphora_ahrb_2005/search_char.cfm -->
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Neck Types</h4>
-            <ul>
-              <li>
-                <img src="img/filter/neck_shortNarrow.jpg" alt="Short/Narrow Neck" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Short/Narrow:</strong> A compressed neck that is small in height and tighter than the rim.
-              </li>
-              <li>
-                <img src="img/filter/neck_cylindrical.jpg" alt="Long/Cylindrical Neck" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Long/Cylindrical:</strong> A tall, tube‑like neck with generally uniform width.
-              </li>
-              <li><strong>Concave:</strong> Neck curves inward, forming an hourglass‑like profile.</li>
-              <li><strong>Wide/Trumpet:</strong> Broad upper neck that widens toward the rim.</li>
-            </ul>
-          </div>
+      <div class="column is-6">
+        <!-- RIM TYPES -->
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Rim Types</h4>
+          <ul>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_beaded.jpg" alt="Beaded Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Beaded:</strong> A simple rounded lip.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_biconical.jpg" alt="Biconical Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Biconical:</strong> The rim appears to be two cones meeting each other.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_collar.jpg" alt="Collared Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Collared:</strong> The rim is noticeably thickened in the form of a collar around the neck of the amphora.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_everted.jpg" alt="Everted Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Everted:</strong> The rim becomes gently wider towards the top.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_flanged.jpg" alt="Flanged Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Flanged:</strong> The rim has a distinctive flange at the top of the neck.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_flaring.jpg" alt="Flaring Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Flaring:</strong> The rim flares out sharply, in a more pronounced manner than an everted rim.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_none.jpg" alt="None Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>None:</strong> There is no apparent rim or distinctive lip of any kind.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_pulleyWheel.jpg" alt="Pulley Wheel Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Pulley Wheel:</strong> This distinctive rim resembles a pulley-wheel.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_rounded.jpg" alt="Rounded Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Rounded:</strong> The rim is gently rounded.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/rim_triangular.jpg" alt="Triangular Rim">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Triangular:</strong> The rim has two straight, angled sides, resembling two partial sides of a triangle.
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Shoulder Types</h4>
-            <ul>
-              <li>
-                <img src="img/filter/shoulder_rounded.jpg" alt="Rounded Shoulder" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Rounded:</strong> Smooth, continuous curve transitioning from neck to body.
-              </li>
-              <li>
-                <img src="img/filter/shoulder_carinated.jpg" alt="Carinated Shoulder" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>Carinated:</strong> Sharp angular break between neck and body.
-              </li>
-              <li>
-                <img src="img/filter/shoulder_noneSmooth.jpg" alt="None/Smooth Shoulder" class="mr-2" style="width:40px; height:auto; vertical-align:middle;">
-                <strong>None/Smooth:</strong> Minimal shoulder definition; almost vertical profile.
-              </li>
-            </ul>
-          </div>
+      <div class="column is-6">
+        <!-- NECK TYPES -->
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Neck Types</h4>
+          <ul>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_broadWide.jpg" alt="Broad/Wide Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Broad/Wide:</strong> No information to display
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_conical.jpg" alt="Conical Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Conical:</strong> The neck is cone-shaped - it tapers upwards.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_cylindrical.jpg" alt="Cylindrical Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Cylindrical:</strong> The neck is cylinder-shaped.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_hourglass.jpg" alt="Hourglass Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Hourglass:</strong> The neck takes the form of an hourglass, narrowing at its mid-point.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_none.jpg" alt="Hourglass Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>None:</strong> There is no distinct neck: the body of the amphora progresses smoothly upwards to the rim.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/neck_shortNarrow.jpg" alt="Short/Narrow Neck">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Short/Narrow:</strong> The neck is disproportionately short and/or narrow relative to the size of the amphora.
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Handle Features</h4>
-            <ul>
-              <li><strong>Handle Profile – Arched:</strong> A smooth arching curve from rim/shoulder to body.</li>
-              <li><strong>Handle Profile – Curved:</strong> A less symmetrical curve, often asymmetrical.</li>
-              <li><strong>Handle Section – Round:</strong> Circular cross‑section.</li>
-              <li><strong>Handle Section – Oval:</strong> Flattened or elongated oval cross‑section.</li>
-              <li><strong>Handle Section – Rectangular:</strong> Thick, slab‑like section.</li>
-            </ul>
-          </div>
+        <!-- SHOULDER TYPES -->
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Shoulder Types</h4>
+          <ul>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/shoulder_carinated.jpg" alt="Carinated Shoulder">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Carinated:</strong> The shoulder displays distinct carination - a ridge where the shoulder meets the body of the amphora.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/shoulder_noneSmooth.jpg" alt="None/Smooth Shoulder">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>None/Smooth:</strong> There is no shoulder: the body of the amphora is uninterrupted.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media mt-3">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="img/filter/shoulder_rounded.jpg" alt="Rounded Shoulder">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <strong>Rounded:</strong> The shoulder is noticeably present, usually supporting the handles, but there is no ridge.
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Body Types</h4>
-            <ul>
-              <li><strong>Globular:</strong> Spherical body shape.</li>
-              <li><strong>Biconical:</strong> Two cones meeting at a mid‑point, forming a sharp profile break.</li>
-              <li><strong>Ovoid:</strong> Egg‑shaped, more elongated than globular.</li>
-              <li><strong>Cylindrical:</strong> Straight vertical walls with minimal curvature.</li>
-            </ul>
-          </div>
+      <div class="column is-6">
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Handle Features</h4>
+          <ul>
+            <li><strong>Handle Profile – Arched:</strong> A smooth arching curve from rim/shoulder to body.</li>
+            <li><strong>Handle Profile – Curved:</strong> A less symmetrical curve, often asymmetrical.</li>
+            <li><strong>Handle Section – Round:</strong> Circular cross‑section.</li>
+            <li><strong>Handle Section – Oval:</strong> Flattened or elongated oval cross‑section.</li>
+            <li><strong>Handle Section – Rectangular:</strong> Thick, slab‑like section.</li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="notification mt-6">
-            <h4 class="title is-5">Base Types</h4>
-            <ul>
-              <li><strong>Rounded Basal Point:</strong> Typical pointed base used for stacking in ships.</li>
-              <li><strong>Flat:</strong> Flat resting base, common in later periods.</li>
-              <li><strong>Knobbed:</strong> Slight protruding knob at the base.</li>
-              <li><strong>Ring Foot:</strong> Circular base ring supporting upright placement.</li>
-            </ul>
-          </div>
+      <div class="column is-6">
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Body Types</h4>
+          <ul>
+            <li><strong>Globular:</strong> Spherical body shape.</li>
+            <li><strong>Biconical:</strong> Two cones meeting at a mid‑point, forming a sharp profile break.</li>
+            <li><strong>Ovoid:</strong> Egg‑shaped, more elongated than globular.</li>
+            <li><strong>Cylindrical:</strong> Straight vertical walls with minimal curvature.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="notification">
+          <h4 class="title is-5 has-text-primary">Base Types</h4>
+          <ul>
+            <li><strong>Rounded Basal Point:</strong> Typical pointed base used for stacking in ships.</li>
+            <li><strong>Flat:</strong> Flat resting base, common in later periods.</li>
+            <li><strong>Knobbed:</strong> Slight protruding knob at the base.</li>
+            <li><strong>Ring Foot:</strong> Circular base ring supporting upright placement.</li>
+          </ul>
         </div>
       </div>
     </div>
