@@ -91,3 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
     filterCards();
   });
 });
+
+// FILTER SECTION TOGGLE
+document.getElementById('toggleAdvancedFilters').addEventListener('click', () => {
+  const box = document.getElementById('advancedFilterBox');
+
+  if (box.style.display === "none") {
+    box.style.display = "block";
+    box.style.maxHeight = "0px";
+
+    setTimeout(() => {
+      box.style.transition = "max-height 0.3s ease";
+      box.style.maxHeight = "500px";
+    }, 10);
+  } else {
+    box.style.transition = "max-height 0.3s ease";
+    box.style.maxHeight = "0px";
+
+    setTimeout(() => {
+      box.style.display = "none";
+    }, 300);
+  }
+});

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Amphora Types</title>
+  <title>Amphora Typology Catalogue</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" integrity="sha512-yh2RE0wZCVZeysGiqTwDTO/dKelCbS9bP2L94UvOFtl/FKXcNAje3Y2oBg/ZMZ3LS1sicYk4dYVGtDex75fvvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- STYLES -->
@@ -74,7 +74,24 @@
 
 <!-- FILTER SECTION -->
 <div id="filterSection" class="has-background-dark p-5">
-  <h3 class="title is-5">Filter Amphoras by Characteristics</h3>
+  <div class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <h3 class="title is-5">Filter Amphoras by Characteristics</h3>
+      </div>
+    </div>
+
+    <div class="level-right">
+      <div class="level-item">
+        <div class="field is-grouped is-grouped-right mt-2">
+          <button id="toggleAdvancedFilters" class="button is-small is-link">
+            Advanced Filters
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="field is-horizontal">
     <div class="field mr-2">
       <label class="label">Rim Type</label>
@@ -209,8 +226,158 @@
     </div>
 
   </div>
-</div>
 
+  <!-- ADVANCED FILTERS -->
+  <div id="advancedFilterBox" class="mt-6" style="display:none; overflow:hidden;">
+    <h3 class="title is-5">Filter Amphoras by date, location and contents</h3>
+
+    <div class="field is-horizontal">
+      <!-- Date of Production -->
+      <div class="field mr-2">
+        <label class="label">Date of Production</label>
+        <div class="control">
+          <div class="select">
+            <select id="filterDate">
+              <option value="">Select</option>
+              <option value="1,4th century BC">4th century BC</option>
+              <option value="2,3rd century BC">3rd century BC</option>
+              <option value="3,2nd century BC">2nd century BC</option>
+              <option value="4,1st century BC">1st century BC</option>
+              <option value="5,1st century AD">1st century AD</option>
+              <option value="6,2nd century AD">2nd century AD</option>
+              <option value="7,3rd century AD">3rd century AD</option>
+              <option value="8,4th century AD">4th century AD</option>
+              <option value="9,5th century AD">5th century AD</option>
+              <option value="10,6th century AD">6th century AD</option>
+              <option value="11,7th century AD">7th century AD</option>
+              <option value="12,8th century AD">8th century AD</option>
+              <option value="0,Unsure">Unsure</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Place of Production -->
+      <div class="field mr-2">
+        <label class="label">Place of Production</label>
+        <div class="control">
+          <div class="select">
+            <select id="filterPlace">
+              <option value="">Select</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Balearic Islands">Balearic Islands</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Black Sea">Black Sea</option>
+              <option value="Crete">Crete</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Eastern Asia Minor">Eastern Asia Minor</option>
+              <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+              <option value="Egypt">Egypt</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Great Britain">Great Britain</option>
+              <option value="Greek Islands">Greek Islands</option>
+              <option value="Greece">Greece</option>
+              <option value="Italy">Italy</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Libya">Libya</option>
+              <option value="Morocco">Morocco</option>
+              <option value="North Africa">North Africa</option>
+              <option value="North West Europe">North West Europe</option>
+              <option value="Palestine">Palestine</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Spain">Spain</option>
+              <option value="The Aegean">The Aegean</option>
+              <option value="The Balkans">The Balkans</option>
+              <option value="The Levant">The Levant</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Western Asia Minor">Western Asia Minor</option>
+              <option value="Western Mediterranean">Western Mediterranean</option>
+              <option value="Unknown">Unknown</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distribution -->
+      <div class="field mr-2">
+        <label class="label">Distribution</label>
+        <div class="control">
+          <div class="select">
+            <select id="filterDistribution">
+              <option value="">Select</option>
+              <option value="Balearic Islands">Balearic Islands</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Black Sea">Black Sea</option>
+              <option value="Central Europe">Central Europe</option>
+              <option value="Crete">Crete</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Eastern Asia Minor">Eastern Asia Minor</option>
+              <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+              <option value="Egypt">Egypt</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Great Britain">Great Britain</option>
+              <option value="Greece">Greece</option>
+              <option value="Greek Islands">Greek Islands</option>
+              <option value="India">India</option>
+              <option value="Italy">Italy</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Libya">Libya</option>
+              <option value="Morocco">Morocco</option>
+              <option value="North Africa">North Africa</option>
+              <option value="North West Europe">North West Europe</option>
+              <option value="Palestine">Palestine</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Red Sea">Red Sea</option>
+              <option value="Spain">Spain</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="The Aegean">The Aegean</option>
+              <option value="The Balkans">The Balkans</option>
+              <option value="The Levant">The Levant</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Western Asia Minor">Western Asia Minor</option>
+              <option value="Western Mediterranean">Western Mediterranean</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contents -->
+      <div class="field mr-2">
+        <label class="label">Contents</label>
+        <div class="control">
+          <div class="select">
+            <select id="filterContents">
+              <option value="">Select</option>
+              <option value="Alum">Alum</option>
+              <option value="Dates">Dates</option>
+              <option value="Defrutum">Defrutum</option>
+              <option value="Figs">Figs</option>
+              <option value="Fish Sauce">Fish Sauce</option>
+              <option value="Fish-based products">Fish-based products</option>
+              <option value="Fruit">Fruit</option>
+              <option value="Honey">Honey</option>
+              <option value="Liquamen">Liquamen</option>
+              <option value="Nuts">Nuts</option>
+              <option value="Olive Oil">Olive Oil</option>
+              <option value="Olives">Olives</option>
+              <option value="Resin">Resin</option>
+              <option value="Vegetable Oil ">Vegetable Oil </option>
+              <option value="Wine">Wine</option>
+              <option value="Unknown">Unknown</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 <section class="section">
   <div class="container"></div>
     <div id="amphoraList" class="columns is-multiline"></div>
