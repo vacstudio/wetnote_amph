@@ -1,5 +1,5 @@
 // main.js
-import { initNav } from '../components/nav.js';
+import { initNav } from '../components/navbar/nav.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
