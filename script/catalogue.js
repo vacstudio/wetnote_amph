@@ -7,21 +7,33 @@ fetch('../data/amphoras.json')
       const col = document.createElement('div');
       col.className = "column is-one-quarter";
 
+      // NEW JSON STRUCTURE
+      const filters = amphora.filter_data;
+
       col.innerHTML = `
         <div 
           class="card amphora-card" 
-          data-filter-rim="${amphora.filterData.rim}" 
-          data-filter-shoulder="${amphora.filterData.shoulder}"
-          data-filter-handle-profile="${amphora.filterData.handleProfile}"
-          data-filter-handle-section="${amphora.filterData.handleSection}"
-          data-filter-neck="${amphora.filterData.neck}"
-          data-filter-body="${amphora.filterData.body}"
-          data-filter-base="${amphora.filterData.base}"
+          data-filter-rim="${filters.rim || ''}" 
+          data-filter-shoulder="${filters.shoulder || ''}"
+          data-filter-handle-profile="${filters.handle_profile || ''}"
+          data-filter-handle-section="${filters.handle_section || ''}"
+          data-filter-neck="${filters.neck || ''}"
+          data-filter-body="${filters.body || ''}"
+          data-filter-base="${filters.base || ''}"
         >
           <div class="card-image">
-            <figure class="image is-4by3 amphora-visual has-background-white" style="max-height:250px; overflow:hidden;">
-              <img class="amphora-thumb" src="${amphora.media.images[0].src}" alt="${amphora.name}" style="width:100%; height:100%; object-fit: contain;">
-              <model-viewer class="amphora-3d" src="${amphora.media.models3d ? amphora.media.models3d[0] : ''}"
+            <figure class="image is-4by3 amphora-visual has-background-white" 
+              style="max-height:250px; overflow:hidden;">
+              
+              <!-- NEW: photos instead of images -->
+              <img class="amphora-thumb" 
+                src="${amphora.media.photos?.[0]?.src || ''}" 
+                alt="${amphora.name}" 
+                style="width:100%; height:100%; object-fit: contain;">
+
+              <!-- NEW: models_3d instead of models3d -->
+              <model-viewer class="amphora-3d" 
+                src="${amphora.media.models_3d?.[0] || ''}"
                 alt="${amphora.name}"
                 camera-controls
                 disable-zoom
@@ -32,13 +44,14 @@ fetch('../data/amphoras.json')
               </model-viewer>
             </figure>
           </div>
+
           <div class="card-content">
             <div class="level">
               <div class="level-left">
                 <div class="level-item"> 
                   <div>
                     <p class="title is-5">${amphora.name}</p>
-                    <p class="subtitle is-6">${amphora.chronology.century}</p>
+                    <p class="subtitle is-6">${amphora.chronology.label}</p>
                   </div>
                 </div>
               </div>
@@ -56,7 +69,7 @@ fetch('../data/amphoras.json')
 
       container.appendChild(col);
 
-      // Hover logic for 3D model
+      // Hover logic for switching between image & 3D model
       const card = col.querySelector('.amphora-card');
       const img = col.querySelector('.amphora-thumb');
       const viewer = col.querySelector('.amphora-3d');
@@ -91,7 +104,6 @@ fetch('../data/amphoras.json')
       });
     }
 
-    // Button listeners
     document.getElementById('viewGrid4')?.addEventListener('click', () => {
       applyGridLayout(4);
     });

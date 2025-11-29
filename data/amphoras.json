@@ -1,76 +1,82 @@
 [
   {
     "id": "dressel-20",
+    "type_code": "DR20-A001",
     "name": "Dressel 20",
 
     "classification": {
       "typology": "Dressel 20",
       "category": "Roman",
-      "subCategory": "Transport Amphora"
+      "subcategory": "Transport Amphora"
     },
 
     "chronology": {
       "period": "Roman Imperial",
-      "century": "1st–3rd century AD",
-      "dateRange": "50 AD – 250 AD"
+      "from_year": 50,
+      "to_year": 250,
+      "label": "1st–3rd century AD"
     },
 
     "origin": {
-      "productionRegion": "Baetica",
-      "productionCenter": "Guadalquivir Valley (Spain)",
-      "clayDescription": "Fine, orange-brown fabric with small black inclusions",
-      "fabricCode": "FAB-BT-A"
+      "production_region": "Baetica",
+      "production_center": "Guadalquivir Valley (Spain)",
+      "clay_description": "Fine, orange-brown fabric with small black inclusions",
+      "fabric_code": "FAB-BT-A"
     },
 
     "characteristics": {
       "rim": "The rim is gently rounded.",
-      "shoulder": "There is no shoulder: the body of the amphora is uninterrupted.",
-      "handleProfile": "The handles gently curve from the neck to shoulder.",
-      "handleSection": "The handle is circular, or nearly circular, in section.",
-      "neck": "The neck is disproportionately short and/or narrow relative to the size of the amphora.",
-      "body": "The body is wide, round and bag-shaped or globular.",
-      "base": "The base extends into a small, pronounced point - not as long as a spike.",
-      "capacityMinLT": 70,
-      "capacityMaxLT": 75,
-      "heightMinCM": 70,
-      "heightMaxCM": 97,
-      "widthMinCM": 56,
-      "widthMaxCM": 66,
-      "rimDiameterMinCM": 18,
-      "rimDiameterMaxCM": 20,
-      "fabric": "Dressel 20 fabric",
-      "surfaceTreatment": ""
+      "shoulder": "There is no shoulder; the body of the amphora is uninterrupted.",
+      "handle_profile": "The handles gently curve from the neck to shoulder.",
+      "handle_section": "Circular or nearly circular in section.",
+      "neck": "Short and narrow relative to body size.",
+      "body": "Wide, globular, bag-shaped.",
+      "base": "Short rounded point, not elongated.",
+      "capacity_min_l": 70,
+      "capacity_max_l": 75,
+      "height_min_cm": 70,
+      "height_max_cm": 97,
+      "width_min_cm": 56,
+      "width_max_cm": 66,
+      "rim_diameter_min_cm": 18,
+      "rim_diameter_max_cm": 20,
+      "fabric_description": "Dressel 20 fabric",
+      "surface_treatment": ""
     },
 
     "measurements": {
       "height_cm": 70,
-      "rimDiameter_cm": 17,
-      "bodyDiameter_cm": 40,
-      "baseDiameter_cm": 3,
+      "rim_diameter_cm": 17,
+      "body_diameter_cm": 40,
+      "base_diameter_cm": 3,
       "weight_kg": 7.5
     },
 
     "distribution": {
       "regions": ["Western Mediterranean", "Rome", "Gaul", "North Africa"],
-      "commonContexts": ["Shipwrecks", "Harbor deposits", "Storage facilities"]
+      "common_contexts": ["Shipwrecks", "Harbor deposits", "Storage facilities"]
     },
 
     "findspots": [
       {
-        "location": "Monte Testaccio",
+        "site": "Monte Testaccio",
         "country": "Italy",
-        "context": "Olive oil dumping hill",
+        "context": "Oil amphora deposit",
+        "coordinates": {
+          "lat": 41.8823,
+          "lng": 12.4666
+        },
         "notes": "Dressel 20 is the dominant type found here."
       }
     ],
 
-    "description": "Large globular Roman amphora type widely used for olive oil distribution from Baetica.",
+    "description": "Large globular Roman amphora widely used for olive oil distribution from Baetica.",
 
     "media": {
-      "images": [
+      "photos": [
         {
           "src": "data/images/dressel20/PEC16.jpg",
-          "caption": "Courtesy of Museu Nacional Arqueològic de Tarragona (Dottsa Pilar Sada)\nDavid Williams"
+          "caption": "Courtesy of Museu Nacional Arqueològic de Tarragona (Dottsa Pilar Sada). Photo: David Williams."
         }
       ],
       "drawings": [
@@ -79,31 +85,51 @@
         "data/drawings/dressel20/DR600.jpg",
         "data/drawings/dressel20/DR111.jpg"
       ],
-      "models3d": [
+      "models_3d": [
         "data/models3d/dressel20/Dressel_20_D_001.glb"
       ],
-      "modelsSVG": [
+      "models_svg": [
         "data/modelsSVG/dressel20/Dressel_20_D_001.svg"
       ]
     },
 
-    "filterData": {
-      "rim": "Rounded",
-      "shoulder": "None/smooth",
-      "handleProfile": "Curved",
-      "handleSection": "Round",
-      "neck": "Short/narrow",
-      "body": "Globular",
-      "base": "Rounded basal point",
-      "capacity_min_lt": 70,
-      "capacity_max_lt": 75,
+    "filter_data": {
+      "rim": "rounded",
+      "shoulder": "none-smooth",
+      "handle_profile": "curved",
+      "handle_section": "round",
+      "neck": "short-narrow",
+      "body": "globular",
+      "base": "rounded-basal-point",
+      "capacity_min_l": 70,
+      "capacity_max_l": 75,
       "height_min_cm": 70,
       "height_max_cm": 97,
       "width_min_cm": 56,
       "width_max_cm": 66,
-      "rimDiameter_min_cm": 18,
-      "rimDiameter_max_cm": 20,
-      "fabric": "Dressel 20 fabric"
-    }
+      "rim_diameter_min_cm": 18,
+      "rim_diameter_max_cm": 20,
+      "fabric": "dressel-20-fabric"
+    },
+
+    "links": {
+      "permalink": "https://www.wetnote.com/amphora/dressel-20",
+      "external": [
+        {
+          "title": "Potsherd - Dressel 20",
+          "url": "https://potsherd.net/atlas/Class/AMPH"
+        },
+        {
+          "title": "ADS ArchAIDE Dataset",
+          "url": "https://doi.org/10.5284/1050896"
+        }
+      ]
+    },
+
+    "references": [
+      "Panella, C. (1986). Monte Testaccio and Dressel 20 amphoras.",
+      "Remesal Rodríguez, J. (1998). Baetican olive oil trade in the Roman Empire.",
+      "Williams, D. (2005). Dressel 20 fabric analysis."
+    ]
   }
 ]

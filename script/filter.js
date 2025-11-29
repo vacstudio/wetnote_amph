@@ -8,9 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const baseFilter = document.getElementById('filterBase');
   const cards = document.querySelectorAll('.amphora-card');
 
-  // Normalization function
-  function normalize(str) {
-    return String(str).toLowerCase().replace(/\s+/g, '-').replace('/', '-');
+  // Normalize values for consistent comparison
+  function normalize(value) {
+    return String(value || "")
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/\//g, '-');
   }
 
   // Filtering function
@@ -32,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = normalize(card.dataset.filterBody);
       const base = normalize(card.dataset.filterBase);
 
-      const show =
+      const match =
         (!rimValue || rim === rimValue) &&
         (!shoulderValue || shoulder === shoulderValue) &&
         (!handleProfileValue || handleProfile === handleProfileValue) &&
@@ -41,11 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         (!bodyValue || body === bodyValue) &&
         (!baseValue || base === baseValue);
 
-      card.style.display = show ? '' : 'none';
+      card.style.display = match ? "" : "none";
     });
   }
 
-  // Expose filterCards globally for Clear Filters button
   window.filterCards = filterCards;
 
   // Event listeners
@@ -59,11 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   bodyFilter.addEventListener('change', filterCards);
   baseFilter.addEventListener('change', filterCards);
 
-  // Select2 initialization for Rim filter
+  // Select2 rendering for Rim filter
   function formatRim(option) {
     if (!option.id) return option.text;
     const img = $(option.element).data('img');
     if (!img) return option.text;
+
     return $(`
       <span style="display:flex; align-items:center;">
         <img src="${img}" style="width:30px; height:auto; margin-right:8px; background:white; padding:2px; border:1px solid #ccc;">
@@ -79,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 'resolve'
   });
 
-  // Clear Filters button
+  // Clear filters
   $(document).on('click', '#clearFilters', () => {
     $('#filterRim').val('').trigger('change');
     shoulderFilter.value = '';
@@ -92,14 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// FILTER SECTION TOGGLE
+// ADVANCED FILTER TOGGLE
 document.getElementById('toggleAdvancedFilters').addEventListener('click', () => {
   const box = document.getElementById('advancedFilterBox');
 
   if (box.style.display === "none") {
     box.style.display = "block";
     box.style.maxHeight = "0px";
-
     setTimeout(() => {
       box.style.transition = "max-height 0.3s ease";
       box.style.maxHeight = "500px";
@@ -107,7 +110,6 @@ document.getElementById('toggleAdvancedFilters').addEventListener('click', () =>
   } else {
     box.style.transition = "max-height 0.3s ease";
     box.style.maxHeight = "0px";
-
     setTimeout(() => {
       box.style.display = "none";
     }, 300);
